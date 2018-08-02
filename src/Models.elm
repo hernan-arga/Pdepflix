@@ -30,7 +30,7 @@ type alias Model = {movies : List Movie, shouldShowDialog: Bool, preferences: Pr
 
 --MOVIES
 moviesCollection : List Movie
-moviesCollection = [avengers2, toyStory3, lionKing, it]
+moviesCollection = [avengers2, toyStory3, lionKing, it, labyrinth, inglouriousBasterds, banieros3, jackAndJill]
 
 avengers2 : Movie
 avengers2 = {id= 1, poster= createPoster "./Assets/Avengers_Age_Of_Ultron.png", title= "Avengers: Age of Ultron", rating= 8.3, genre= ["Action", "Adventure", "Superhero"], link= "https://www.youtube.com/watch?v=rD8lWtcgeyg", likes = 0, matchPercentage = 0, forKids = True, actors = ["Robert Downey JR", "Chris Hemsworth", "Mark Ruffalo", "Chris Evans", "Scarlett Johansson", "Samuel L. Jackson"]}
@@ -43,6 +43,18 @@ lionKing = {id= 3, poster= createPoster "./Assets/The_Lion_King.png", title= "Li
 
 it : Movie
 it = {id= 4, poster= createPoster "./Assets/it_poster.png", title= "IT", rating= 8.0, genre= ["Horror"], link= "https://www.youtube.com/watch?v=hAUTdjf9rko", likes = 0, matchPercentage = 0, forKids = False, actors = ["Jaeden Lieberher", "Bill Skarsgård", "Wyatt Oleff", "Jeremy Ray Taylor", "Sophia Lillis", "Finn Wolfhard"]}
+
+labyrinth : Movie
+labyrinth = {id= 5, poster = createPoster "./Assets/labyrinth.png", title= "Labyrinth", rating= 8.0, genre= ["Fantasy", "Musical", "Family"], link="https://www.youtube.com/watch?v=O2yd4em1I6M", likes = 0, matchPercentage = 0, forKids = True, actors = ["David Bowie", "Jennifer Connelly", "Toby Froud", "Brian Henson"]}
+
+inglouriousBasterds : Movie
+inglouriousBasterds = {id= 6, poster = createPoster "./Assets/inglorious_bastards.png", title= "Inglourious Basterds", rating= 9.0, genre= ["Action", "War", "Drama"], link= "https://www.youtube.com/watch?v=KnrRy6kSFF0", likes = 0, matchPercentage = 0, forKids = False, actors = ["Brad Pitt", "Christoph Waltz", "Diane Kruger", "Mélanie Laurent"]}
+
+banieros3 : Movie
+banieros3 = {id= 7, poster = createPoster "./Assets/banieros3.png", title= "Bañeros 3: Todopoderosos", rating= 10.0, genre= ["Comedy", "Action", "Drama"], link= "https://www.youtube.com/watch?v=K-fwBTo6nDs", likes = 0, matchPercentage = 0, forKids = False, actors = ["Emilio Disi", "Pablo Granados", "Pachu Peña", "Freddy Villarreal", "Gino Renni"]} 
+
+jackAndJill : Movie
+jackAndJill = {id= 8, poster = createPoster "./Assets/Jack_and_jill.png", title= "Jack and Jill", rating= 2.3, genre= ["Horror"], link= "https://www.youtube.com/watch?v=qHKTXrUnN58", likes = 0, matchPercentage = 0, forKids = False, actors = ["Adam Sandler"]}
 
 --POSTERS
 createPoster : String -> Image

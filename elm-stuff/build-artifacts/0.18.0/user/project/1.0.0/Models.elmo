@@ -1,6 +1,150 @@
 var _user$project$Models$createPoster = function (imageUrl) {
 	return {url: imageUrl, width: 400, height: 400};
 };
+var _user$project$Models$jackAndJill = {
+	id: 8,
+	poster: _user$project$Models$createPoster('./Assets/Jack_and_jill.png'),
+	title: 'Jack and Jill',
+	rating: 2.3,
+	genre: {
+		ctor: '::',
+		_0: 'Horror',
+		_1: {ctor: '[]'}
+	},
+	link: 'https://www.youtube.com/watch?v=qHKTXrUnN58',
+	likes: 0,
+	matchPercentage: 0,
+	forKids: false,
+	actors: {
+		ctor: '::',
+		_0: 'Adam Sandler',
+		_1: {ctor: '[]'}
+	}
+};
+var _user$project$Models$banieros3 = {
+	id: 7,
+	poster: _user$project$Models$createPoster('./Assets/banieros3.png'),
+	title: 'Bañeros 3: Todopoderosos',
+	rating: 10.0,
+	genre: {
+		ctor: '::',
+		_0: 'Comedy',
+		_1: {
+			ctor: '::',
+			_0: 'Action',
+			_1: {
+				ctor: '::',
+				_0: 'Drama',
+				_1: {ctor: '[]'}
+			}
+		}
+	},
+	link: 'https://www.youtube.com/watch?v=K-fwBTo6nDs',
+	likes: 0,
+	matchPercentage: 0,
+	forKids: false,
+	actors: {
+		ctor: '::',
+		_0: 'Emilio Disi',
+		_1: {
+			ctor: '::',
+			_0: 'Pablo Granados',
+			_1: {
+				ctor: '::',
+				_0: 'Pachu Peña',
+				_1: {
+					ctor: '::',
+					_0: 'Freddy Villarreal',
+					_1: {
+						ctor: '::',
+						_0: 'Gino Renni',
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Models$inglouriousBasterds = {
+	id: 6,
+	poster: _user$project$Models$createPoster('./Assets/inglorious_bastards.png'),
+	title: 'Inglourious Basterds',
+	rating: 9.0,
+	genre: {
+		ctor: '::',
+		_0: 'Action',
+		_1: {
+			ctor: '::',
+			_0: 'War',
+			_1: {
+				ctor: '::',
+				_0: 'Drama',
+				_1: {ctor: '[]'}
+			}
+		}
+	},
+	link: 'https://www.youtube.com/watch?v=KnrRy6kSFF0',
+	likes: 0,
+	matchPercentage: 0,
+	forKids: false,
+	actors: {
+		ctor: '::',
+		_0: 'Brad Pitt',
+		_1: {
+			ctor: '::',
+			_0: 'Christoph Waltz',
+			_1: {
+				ctor: '::',
+				_0: 'Diane Kruger',
+				_1: {
+					ctor: '::',
+					_0: 'Mélanie Laurent',
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	}
+};
+var _user$project$Models$labyrinth = {
+	id: 5,
+	poster: _user$project$Models$createPoster('./Assets/labyrinth.png'),
+	title: 'Labyrinth',
+	rating: 8.0,
+	genre: {
+		ctor: '::',
+		_0: 'Fantasy',
+		_1: {
+			ctor: '::',
+			_0: 'Musical',
+			_1: {
+				ctor: '::',
+				_0: 'Family',
+				_1: {ctor: '[]'}
+			}
+		}
+	},
+	link: 'https://www.youtube.com/watch?v=O2yd4em1I6M',
+	likes: 0,
+	matchPercentage: 0,
+	forKids: true,
+	actors: {
+		ctor: '::',
+		_0: 'David Bowie',
+		_1: {
+			ctor: '::',
+			_0: 'Jennifer Connelly',
+			_1: {
+				ctor: '::',
+				_0: 'Toby Froud',
+				_1: {
+					ctor: '::',
+					_0: 'Brian Henson',
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	}
+};
 var _user$project$Models$it = {
 	id: 4,
 	poster: _user$project$Models$createPoster('./Assets/it_poster.png'),
@@ -205,7 +349,23 @@ var _user$project$Models$moviesCollection = {
 			_1: {
 				ctor: '::',
 				_0: _user$project$Models$it,
-				_1: {ctor: '[]'}
+				_1: {
+					ctor: '::',
+					_0: _user$project$Models$labyrinth,
+					_1: {
+						ctor: '::',
+						_0: _user$project$Models$inglouriousBasterds,
+						_1: {
+							ctor: '::',
+							_0: _user$project$Models$banieros3,
+							_1: {
+								ctor: '::',
+								_0: _user$project$Models$jackAndJill,
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

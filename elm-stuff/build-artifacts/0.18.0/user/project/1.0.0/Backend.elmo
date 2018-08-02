@@ -12,7 +12,11 @@ var _user$project$Backend$porcentajeAsociado = F2(
 						_1: {
 							ctor: '::',
 							_0: 'Action',
-							_1: {ctor: '[]'}
+							_1: {
+								ctor: '::',
+								_0: 'War',
+								_1: {ctor: '[]'}
+							}
 						}
 					}) ? 15 : 0;
 			case 'Adventure':
@@ -25,7 +29,11 @@ var _user$project$Backend$porcentajeAsociado = F2(
 						_1: {
 							ctor: '::',
 							_0: 'Action',
-							_1: {ctor: '[]'}
+							_1: {
+								ctor: '::',
+								_0: 'War',
+								_1: {ctor: '[]'}
+							}
 						}
 					}) ? 15 : 0;
 			case 'Action':
@@ -38,13 +46,98 @@ var _user$project$Backend$porcentajeAsociado = F2(
 						_1: {
 							ctor: '::',
 							_0: 'Adventure',
-							_1: {ctor: '[]'}
+							_1: {
+								ctor: '::',
+								_0: 'War',
+								_1: {ctor: '[]'}
+							}
+						}
+					}) ? 15 : 0;
+			case 'War':
+				return A2(
+					_elm_lang$core$List$member,
+					posibleGenero,
+					{
+						ctor: '::',
+						_0: 'Adventure',
+						_1: {
+							ctor: '::',
+							_0: 'Action',
+							_1: {
+								ctor: '::',
+								_0: 'Superhero',
+								_1: {ctor: '[]'}
+							}
+						}
+					}) ? 15 : 0;
+			case 'Comedy':
+				return A2(
+					_elm_lang$core$List$member,
+					posibleGenero,
+					{
+						ctor: '::',
+						_0: 'Family',
+						_1: {
+							ctor: '::',
+							_0: 'Animated',
+							_1: {
+								ctor: '::',
+								_0: 'Fantasy',
+								_1: {ctor: '[]'}
+							}
 						}
 					}) ? 15 : 0;
 			case 'Family':
-				return _elm_lang$core$Native_Utils.eq(posibleGenero, 'Animated') ? 15 : 0;
+				return A2(
+					_elm_lang$core$List$member,
+					posibleGenero,
+					{
+						ctor: '::',
+						_0: 'Comedy',
+						_1: {
+							ctor: '::',
+							_0: 'Animated',
+							_1: {
+								ctor: '::',
+								_0: 'Fantasy',
+								_1: {ctor: '[]'}
+							}
+						}
+					}) ? 15 : 0;
 			case 'Animated':
-				return _elm_lang$core$Native_Utils.eq(posibleGenero, 'Family') ? 15 : 0;
+				return A2(
+					_elm_lang$core$List$member,
+					posibleGenero,
+					{
+						ctor: '::',
+						_0: 'Family',
+						_1: {
+							ctor: '::',
+							_0: 'Comedy',
+							_1: {
+								ctor: '::',
+								_0: 'Fantasy',
+								_1: {ctor: '[]'}
+							}
+						}
+					}) ? 15 : 0;
+			case 'Fantasy':
+				return A2(
+					_elm_lang$core$List$member,
+					posibleGenero,
+					{
+						ctor: '::',
+						_0: 'Family',
+						_1: {
+							ctor: '::',
+							_0: 'Comedy',
+							_1: {
+								ctor: '::',
+								_0: 'Animated',
+								_1: {ctor: '[]'}
+							}
+						}
+					}) ? 15 : 0;
 			case 'Horror':
 				return _elm_lang$core$Native_Utils.eq(posibleGenero, 'Suspense') ? 15 : 0;
 			case 'Suspense':

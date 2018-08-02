@@ -81,23 +81,43 @@ var _user$project$Components_Navbar$navbar = A2(
 									_0: 'Genre',
 									_1: {
 										ctor: '::',
-										_0: 'Horror',
+										_0: 'Action',
 										_1: {
 											ctor: '::',
-											_0: 'Family',
+											_0: 'Adventure',
 											_1: {
 												ctor: '::',
 												_0: 'Animated',
 												_1: {
 													ctor: '::',
-													_0: 'Action',
+													_0: 'Comedy',
 													_1: {
 														ctor: '::',
-														_0: 'Adventure',
+														_0: 'Drama',
 														_1: {
 															ctor: '::',
-															_0: 'Superhero',
-															_1: {ctor: '[]'}
+															_0: 'Family',
+															_1: {
+																ctor: '::',
+																_0: 'Fantasy',
+																_1: {
+																	ctor: '::',
+																	_0: 'Horror',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Musical',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Superhero',
+																			_1: {
+																				ctor: '::',
+																				_0: 'War',
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	}
+																}
+															}
 														}
 													}
 												}

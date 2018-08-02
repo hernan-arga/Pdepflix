@@ -102,11 +102,14 @@ lePuedeGustar genero = List.sum<<List.map (porcentajeAsociado genero)
 porcentajeAsociado : String -> String -> Int
 porcentajeAsociado genero posibleGenero = 
     case genero of
-        "Superhero" -> if List.member posibleGenero ["Adventure", "Action"] then 15 else 0
-        "Adventure" -> if List.member posibleGenero ["Superhero", "Action"] then 15 else 0
-        "Action" -> if List.member posibleGenero ["Superhero", "Adventure"] then 15 else 0
-        "Family" -> if posibleGenero == "Animated" then 15 else 0
-        "Animated" -> if posibleGenero == "Family" then 15 else 0
+        "Superhero" -> if List.member posibleGenero ["Adventure", "Action", "War"] then 15 else 0
+        "Adventure" -> if List.member posibleGenero ["Superhero", "Action", "War"] then 15 else 0
+        "Action" -> if List.member posibleGenero ["Superhero", "Adventure", "War"] then 15 else 0
+        "War" -> if List.member posibleGenero ["Adventure", "Action", "Superhero"] then 15 else 0
+        "Comedy" -> if List.member posibleGenero ["Family", "Animated", "Fantasy"] then 15 else 0
+        "Family" -> if List.member posibleGenero ["Comedy", "Animated", "Fantasy"] then 15 else 0
+        "Animated" -> if List.member posibleGenero ["Family", "Comedy", "Fantasy"] then 15 else 0
+        "Fantasy" -> if List.member posibleGenero ["Family", "Comedy", "Animated"] then 15 else 0
         "Horror" -> if posibleGenero == "Suspense" then 15 else 0
         "Suspense" -> if posibleGenero == "Horror" then 15 else 0
         _ -> 0
