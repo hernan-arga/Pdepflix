@@ -1,0 +1,27 @@
+var _user$project$Msg$OrderByRating = {ctor: 'OrderByRating'};
+var _user$project$Msg$KidsFilter = function (a) {
+	return {ctor: 'KidsFilter', _0: a};
+};
+var _user$project$Msg$ChangeGenre = function (a) {
+	return {ctor: 'ChangeGenre', _0: a};
+};
+var _user$project$Msg$MatchPercentage = {ctor: 'MatchPercentage'};
+var _user$project$Msg$UpdatePreferencesActor = function (a) {
+	return {ctor: 'UpdatePreferencesActor', _0: a};
+};
+var _user$project$Msg$UpdatePreferencesGenre = function (a) {
+	return {ctor: 'UpdatePreferencesGenre', _0: a};
+};
+var _user$project$Msg$UpdatePreferencesKeywords = function (a) {
+	return {ctor: 'UpdatePreferencesKeywords', _0: a};
+};
+var _user$project$Msg$HideDialog = {ctor: 'HideDialog'};
+var _user$project$Msg$ShowDialog = {ctor: 'ShowDialog'};
+var _user$project$Msg$IncrementLikes = function (a) {
+	return {ctor: 'IncrementLikes', _0: a};
+};
+var _user$project$Msg$FilterName = function (a) {
+	return {ctor: 'FilterName', _0: a};
+};
+var _user$project$Msg$Reset = {ctor: 'Reset'};
+var _user$project$Msg$NoOp = {ctor: 'NoOp'};

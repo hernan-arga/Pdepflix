@@ -1,0 +1,64 @@
+var _user$project$Styles$portrait = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'margin', _1: 'auto'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'width', _1: '250px'},
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$Styles$navbarText = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'color', _1: 'white'},
+		_1: {ctor: '[]'}
+	});
+var _user$project$Styles$likeButton = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '5px'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'text-align', _1: 'center'},
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$Styles$title = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'font-size', _1: '30px'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'margin-bottom', _1: '5px'},
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$Styles$poster = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'height', _1: '400px'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'width', _1: '250px'},
+			_1: {
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: 'margin-bottom', _1: '10px'},
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _user$project$Styles$modal = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'background-color', _1: '#FFFFE0'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'margin', _1: 'auto'},
+			_1: {
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: 'align-items', _1: 'center'},
+				_1: {ctor: '[]'}
+			}
+		}
+	});

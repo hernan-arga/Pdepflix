@@ -1,0 +1,252 @@
+var _user$project$Models$createPoster = function (imageUrl) {
+	return {url: imageUrl, width: 400, height: 400};
+};
+var _user$project$Models$it = {
+	id: 4,
+	poster: _user$project$Models$createPoster('./Assets/it_poster.png'),
+	title: 'IT',
+	rating: 8.0,
+	genre: {
+		ctor: '::',
+		_0: 'Horror',
+		_1: {ctor: '[]'}
+	},
+	link: 'https://www.youtube.com/watch?v=hAUTdjf9rko',
+	likes: 0,
+	matchPercentage: 0,
+	forKids: false,
+	actors: {
+		ctor: '::',
+		_0: 'Jaeden Lieberher',
+		_1: {
+			ctor: '::',
+			_0: 'Bill Skarsgård',
+			_1: {
+				ctor: '::',
+				_0: 'Wyatt Oleff',
+				_1: {
+					ctor: '::',
+					_0: 'Jeremy Ray Taylor',
+					_1: {
+						ctor: '::',
+						_0: 'Sophia Lillis',
+						_1: {
+							ctor: '::',
+							_0: 'Finn Wolfhard',
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Models$lionKing = {
+	id: 3,
+	poster: _user$project$Models$createPoster('./Assets/The_Lion_King.png'),
+	title: 'Lion King',
+	rating: 9.5,
+	genre: {
+		ctor: '::',
+		_0: 'Family',
+		_1: {
+			ctor: '::',
+			_0: 'Animated',
+			_1: {ctor: '[]'}
+		}
+	},
+	link: 'https://www.youtube.com/watch?v=_ujGv5dhGfk',
+	likes: 0,
+	matchPercentage: 0,
+	forKids: true,
+	actors: {
+		ctor: '::',
+		_0: 'Rowan Atkinson',
+		_1: {
+			ctor: '::',
+			_0: 'Matthew Broderick',
+			_1: {
+				ctor: '::',
+				_0: 'Niketa Calame-Harris',
+				_1: {
+					ctor: '::',
+					_0: 'Jeremy Irons',
+					_1: {
+						ctor: '::',
+						_0: 'James Earl Jones',
+						_1: {
+							ctor: '::',
+							_0: 'Nathan Lane',
+							_1: {
+								ctor: '::',
+								_0: 'Ernie Sabella',
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Models$toyStory3 = {
+	id: 2,
+	poster: _user$project$Models$createPoster('./Assets/Toy_Story_3_poster.png'),
+	title: 'Toy Story 3',
+	rating: 9.0,
+	genre: {
+		ctor: '::',
+		_0: 'Family',
+		_1: {
+			ctor: '::',
+			_0: 'Animated',
+			_1: {ctor: '[]'}
+		}
+	},
+	link: 'https://www.youtube.com/watch?v=JcpWXaA2qeg',
+	likes: 0,
+	matchPercentage: 0,
+	forKids: true,
+	actors: {
+		ctor: '::',
+		_0: 'Tom Hanks',
+		_1: {
+			ctor: '::',
+			_0: 'Tim Allen',
+			_1: {
+				ctor: '::',
+				_0: 'Don Rickles',
+				_1: {
+					ctor: '::',
+					_0: 'Wallace Shawn',
+					_1: {
+						ctor: '::',
+						_0: 'John Ratzenberger',
+						_1: {
+							ctor: '::',
+							_0: 'Ned Beatty',
+							_1: {
+								ctor: '::',
+								_0: 'Michael Keaton',
+								_1: {
+									ctor: '::',
+									_0: 'John Morris',
+									_1: {
+										ctor: '::',
+										_0: 'Blake Clark',
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Models$avengers2 = {
+	id: 1,
+	poster: _user$project$Models$createPoster('./Assets/Avengers_Age_Of_Ultron.png'),
+	title: 'Avengers: Age of Ultron',
+	rating: 8.3,
+	genre: {
+		ctor: '::',
+		_0: 'Action',
+		_1: {
+			ctor: '::',
+			_0: 'Adventure',
+			_1: {
+				ctor: '::',
+				_0: 'Superhero',
+				_1: {ctor: '[]'}
+			}
+		}
+	},
+	link: 'https://www.youtube.com/watch?v=rD8lWtcgeyg',
+	likes: 0,
+	matchPercentage: 0,
+	forKids: true,
+	actors: {
+		ctor: '::',
+		_0: 'Robert Downey JR',
+		_1: {
+			ctor: '::',
+			_0: 'Chris Hemsworth',
+			_1: {
+				ctor: '::',
+				_0: 'Mark Ruffalo',
+				_1: {
+					ctor: '::',
+					_0: 'Chris Evans',
+					_1: {
+						ctor: '::',
+						_0: 'Scarlett Johansson',
+						_1: {
+							ctor: '::',
+							_0: 'Samuel L. Jackson',
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Models$moviesCollection = {
+	ctor: '::',
+	_0: _user$project$Models$avengers2,
+	_1: {
+		ctor: '::',
+		_0: _user$project$Models$toyStory3,
+		_1: {
+			ctor: '::',
+			_0: _user$project$Models$lionKing,
+			_1: {
+				ctor: '::',
+				_0: _user$project$Models$it,
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Models$Movie = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return {id: a, poster: b, title: c, rating: d, genre: e, link: f, likes: g, matchPercentage: h, forKids: i, actors: j};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$Image = F3(
+	function (a, b, c) {
+		return {url: a, width: b, height: c};
+	});
+var _user$project$Models$Preferences = F3(
+	function (a, b, c) {
+		return {keywords: a, genre: b, favoriteActor: c};
+	});
+var _user$project$Models$initialModel = {
+	movies: _user$project$Models$moviesCollection,
+	shouldShowDialog: false,
+	preferences: A3(_user$project$Models$Preferences, '', '', ''),
+	genre: '',
+	kidsProtection: false
+};
+var _user$project$Models$Model = F5(
+	function (a, b, c, d, e) {
+		return {movies: a, shouldShowDialog: b, preferences: c, genre: d, kidsProtection: e};
+	});

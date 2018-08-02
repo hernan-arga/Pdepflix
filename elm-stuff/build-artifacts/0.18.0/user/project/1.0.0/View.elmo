@@ -1,0 +1,139 @@
+var _user$project$View$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _rundis$elm_bootstrap$Bootstrap_CDN$stylesheet,
+			_1: {
+				ctor: '::',
+				_0: _user$project$Components_Navbar$navbar,
+				_1: {
+					ctor: '::',
+					_0: _user$project$Components_PreferencesModal$preferencesModal(model),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_rundis$elm_bootstrap$Bootstrap_Grid$container,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$br,
+									{ctor: '[]'},
+									{ctor: '[]'}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_rundis$elm_bootstrap$Bootstrap_Grid$row,
+										{ctor: '[]'},
+										{
+											ctor: '::',
+											_0: A2(
+												_rundis$elm_bootstrap$Bootstrap_Grid$col,
+												{ctor: '[]'},
+												{
+													ctor: '::',
+													_0: A2(
+														_rundis$elm_bootstrap$Bootstrap_ButtonGroup$buttonGroup,
+														{ctor: '[]'},
+														{
+															ctor: '::',
+															_0: A2(
+																_rundis$elm_bootstrap$Bootstrap_ButtonGroup$button,
+																{
+																	ctor: '::',
+																	_0: _rundis$elm_bootstrap$Bootstrap_Button$success,
+																	_1: {
+																		ctor: '::',
+																		_0: _rundis$elm_bootstrap$Bootstrap_Button$attrs(
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Events$onClick(_user$project$Msg$OrderByRating),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
+																},
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html$text('Order'),
+																	_1: {ctor: '[]'}
+																}),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_rundis$elm_bootstrap$Bootstrap_ButtonGroup$button,
+																	{
+																		ctor: '::',
+																		_0: _rundis$elm_bootstrap$Bootstrap_Button$success,
+																		_1: {
+																			ctor: '::',
+																			_0: _rundis$elm_bootstrap$Bootstrap_Button$attrs(
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Events$onClick(_user$project$Msg$Reset),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {ctor: '[]'}
+																		}
+																	},
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html$text('Reset'),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_rundis$elm_bootstrap$Bootstrap_ButtonGroup$button,
+																		{
+																			ctor: '::',
+																			_0: _rundis$elm_bootstrap$Bootstrap_Button$success,
+																			_1: {
+																				ctor: '::',
+																				_0: _rundis$elm_bootstrap$Bootstrap_Button$attrs(
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Events$onClick(_user$project$Msg$ShowDialog),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {ctor: '[]'}
+																			}
+																		},
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html$text('Preferences'),
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {ctor: '[]'}
+																}
+															}
+														}),
+													_1: {ctor: '[]'}
+												}),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$br,
+											{ctor: '[]'},
+											{ctor: '[]'}),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_rundis$elm_bootstrap$Bootstrap_Grid$row,
+												{ctor: '[]'},
+												_user$project$Components_MoviePortrait$moviePortraites(model)),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};

@@ -1,0 +1,175 @@
+var _user$project$Backend$porcentajeAsociado = F2(
+	function (genero, posibleGenero) {
+		var _p0 = genero;
+		switch (_p0) {
+			case 'Superhero':
+				return A2(
+					_elm_lang$core$List$member,
+					posibleGenero,
+					{
+						ctor: '::',
+						_0: 'Adventure',
+						_1: {
+							ctor: '::',
+							_0: 'Action',
+							_1: {ctor: '[]'}
+						}
+					}) ? 15 : 0;
+			case 'Adventure':
+				return A2(
+					_elm_lang$core$List$member,
+					posibleGenero,
+					{
+						ctor: '::',
+						_0: 'Superhero',
+						_1: {
+							ctor: '::',
+							_0: 'Action',
+							_1: {ctor: '[]'}
+						}
+					}) ? 15 : 0;
+			case 'Action':
+				return A2(
+					_elm_lang$core$List$member,
+					posibleGenero,
+					{
+						ctor: '::',
+						_0: 'Superhero',
+						_1: {
+							ctor: '::',
+							_0: 'Adventure',
+							_1: {ctor: '[]'}
+						}
+					}) ? 15 : 0;
+			case 'Family':
+				return _elm_lang$core$Native_Utils.eq(posibleGenero, 'Animated') ? 15 : 0;
+			case 'Animated':
+				return _elm_lang$core$Native_Utils.eq(posibleGenero, 'Family') ? 15 : 0;
+			case 'Horror':
+				return _elm_lang$core$Native_Utils.eq(posibleGenero, 'Suspense') ? 15 : 0;
+			case 'Suspense':
+				return _elm_lang$core$Native_Utils.eq(posibleGenero, 'Horror') ? 15 : 0;
+			default:
+				return 0;
+		}
+	});
+var _user$project$Backend$lePuedeGustar = function (genero) {
+	return function (_p1) {
+		return _elm_lang$core$List$sum(
+			A2(
+				_elm_lang$core$List$map,
+				_user$project$Backend$porcentajeAsociado(genero),
+				_p1));
+	};
+};
+var _user$project$Backend$porcentajeGenerosAsociados = F2(
+	function (preferencias, pelicula) {
+		return A2(_user$project$Backend$lePuedeGustar, preferencias.genre, pelicula.genre);
+	});
+var _user$project$Backend$dar1Like = F2(
+	function (id, pelicula) {
+		return _elm_lang$core$Native_Utils.eq(id, pelicula.id) ? _elm_lang$core$Native_Utils.update(
+			pelicula,
+			{likes: pelicula.likes + 1}) : pelicula;
+	});
+var _user$project$Backend$darLikeAPelicula = function (id) {
+	return _elm_lang$core$List$map(
+		_user$project$Backend$dar1Like(id));
+};
+var _user$project$Backend$ordenarPeliculasPorRating = _elm_lang$core$List$sortBy(
+	function (_) {
+		return _.matchPercentage;
+	});
+var _user$project$Backend$soloMenores = _elm_lang$core$List$filter(
+	function (_) {
+		return _.forKids;
+	});
+var _user$project$Backend$filtrarPeliculasPorMenoresDeEdad = F2(
+	function (mostrarSoloMenores, peliculas) {
+		return mostrarSoloMenores ? _user$project$Backend$soloMenores(peliculas) : peliculas;
+	});
+var _user$project$Backend$contiene1palabra = F2(
+	function (palabra1, palabra2) {
+		return A2(
+			_elm_lang$core$String$contains,
+			_elm_lang$core$String$toUpper(palabra1),
+			_elm_lang$core$String$toUpper(palabra2)) && ((!_elm_lang$core$Native_Utils.eq(palabra1, '')) && (!_elm_lang$core$Native_Utils.eq(palabra2, '')));
+	});
+var _user$project$Backend$coincideGenero = F2(
+	function (genero, pelicula) {
+		return A2(
+			_elm_lang$core$List$any,
+			_user$project$Backend$contiene1palabra(genero),
+			pelicula.genre);
+	});
+var _user$project$Backend$filtrarPeliculasPorGenero = function (genero) {
+	return _elm_lang$core$List$filter(
+		_user$project$Backend$coincideGenero(genero));
+};
+var _user$project$Backend$porcentajeGenero = F2(
+	function (preferencias, pelicula) {
+		return A2(_user$project$Backend$coincideGenero, preferencias.genre, pelicula) ? 60 : 0;
+	});
+var _user$project$Backend$palabrasClavesEncontradas = F2(
+	function (preferencias, pelicula) {
+		return A2(
+			_elm_lang$core$List$filter,
+			A2(_elm_lang$core$Basics$flip, _user$project$Backend$contiene1palabra, pelicula.title),
+			_elm_lang$core$String$words(preferencias.keywords));
+	});
+var _user$project$Backend$porcentajePalabrasClaves = function (preferencias) {
+	return function (_p2) {
+		return A2(
+			F2(
+				function (x, y) {
+					return x * y;
+				}),
+			20,
+			_elm_lang$core$List$length(
+				A2(_user$project$Backend$palabrasClavesEncontradas, preferencias, _p2)));
+	};
+};
+var _user$project$Backend$contieneActor = F2(
+	function (pelicula, actor) {
+		return A2(
+			_elm_lang$core$List$any,
+			_user$project$Backend$contiene1palabra(actor),
+			pelicula.actors);
+	});
+var _user$project$Backend$porcentajeActor = F2(
+	function (preferencias, pelicula) {
+		return A2(_user$project$Backend$contieneActor, pelicula, preferencias.favoriteActor) ? 50 : 0;
+	});
+var _user$project$Backend$porcentajeTotal = F2(
+	function (preferencias, pelicula) {
+		return ((A2(_user$project$Backend$porcentajePalabrasClaves, preferencias, pelicula) + A2(_user$project$Backend$porcentajeActor, preferencias, pelicula)) + A2(_user$project$Backend$porcentajeGenero, preferencias, pelicula)) + A2(_user$project$Backend$porcentajeGenerosAsociados, preferencias, pelicula);
+	});
+var _user$project$Backend$porcentajeDe1Pelicula = F2(
+	function (preferencias, pelicula) {
+		return (_elm_lang$core$Native_Utils.cmp(
+			A2(_user$project$Backend$porcentajeTotal, preferencias, pelicula),
+			100) > 0) ? 100 : A2(_user$project$Backend$porcentajeTotal, preferencias, pelicula);
+	});
+var _user$project$Backend$modificarPorcentaje = F2(
+	function (preferencias, pelicula) {
+		return _elm_lang$core$Native_Utils.update(
+			pelicula,
+			{
+				matchPercentage: A2(_user$project$Backend$porcentajeDe1Pelicula, preferencias, pelicula)
+			});
+	});
+var _user$project$Backend$calcularPorcentajeDeCoincidencia = function (preferencias) {
+	return _elm_lang$core$List$map(
+		_user$project$Backend$modificarPorcentaje(preferencias));
+};
+var _user$project$Backend$peliculaTienePalabrasClave = F2(
+	function (palabras, pelicula) {
+		return A2(
+			_elm_lang$core$List$all,
+			A2(_elm_lang$core$Basics$flip, _user$project$Backend$contiene1palabra, pelicula.title),
+			_elm_lang$core$String$words(palabras));
+	});
+var _user$project$Backend$filtrarPeliculasPorPalabrasClave = function (palabras) {
+	return _elm_lang$core$List$filter(
+		_user$project$Backend$peliculaTienePalabrasClave(palabras));
+};

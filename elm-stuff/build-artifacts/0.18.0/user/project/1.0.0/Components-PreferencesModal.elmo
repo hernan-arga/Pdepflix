@@ -1,0 +1,206 @@
+var _user$project$Components_PreferencesModal$preferencesModal = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _krisajenkins$elm_dialog$Dialog$view(
+				model.shouldShowDialog ? _elm_lang$core$Maybe$Just(
+					{
+						closeMessage: _elm_lang$core$Maybe$Just(_user$project$Msg$HideDialog),
+						containerClass: _elm_lang$core$Maybe$Just('your-container-class'),
+						header: _elm_lang$core$Maybe$Just(
+							_elm_lang$html$Html$text('')),
+						body: _elm_lang$core$Maybe$Just(
+							A2(
+								_elm_lang$html$Html$div,
+								{
+									ctor: '::',
+									_0: _user$project$Styles$modal,
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$h4,
+										{ctor: '[]'},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text('Preferences'),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_rundis$elm_bootstrap$Bootstrap_Form$group,
+											{ctor: '[]'},
+											{
+												ctor: '::',
+												_0: A2(
+													_rundis$elm_bootstrap$Bootstrap_Form$label,
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$for('keywords'),
+														_1: {ctor: '[]'}
+													},
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html$text('Keywords: '),
+														_1: {ctor: '[]'}
+													}),
+												_1: {
+													ctor: '::',
+													_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$text(
+														{
+															ctor: '::',
+															_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$id('keywords'),
+															_1: {
+																ctor: '::',
+																_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$value(model.preferences.keywords),
+																_1: {
+																	ctor: '::',
+																	_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$attrs(
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Attributes$placeholder('Enter your keywords separated with a space'),
+																			_1: {
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Events$onInput(_user$project$Msg$UpdatePreferencesKeywords),
+																				_1: {ctor: '[]'}
+																			}
+																		}),
+																	_1: {ctor: '[]'}
+																}
+															}
+														}),
+													_1: {ctor: '[]'}
+												}
+											}),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_rundis$elm_bootstrap$Bootstrap_Form$group,
+												{ctor: '[]'},
+												{
+													ctor: '::',
+													_0: A2(
+														_rundis$elm_bootstrap$Bootstrap_Form$label,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$for('genre'),
+															_1: {ctor: '[]'}
+														},
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html$text('Genre: '),
+															_1: {ctor: '[]'}
+														}),
+													_1: {
+														ctor: '::',
+														_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$text(
+															{
+																ctor: '::',
+																_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$id('genre'),
+																_1: {
+																	ctor: '::',
+																	_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$value(model.preferences.genre),
+																	_1: {
+																		ctor: '::',
+																		_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$attrs(
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$placeholder('Enter your favorite genre'),
+																				_1: {
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Events$onInput(_user$project$Msg$UpdatePreferencesGenre),
+																					_1: {ctor: '[]'}
+																				}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}),
+														_1: {ctor: '[]'}
+													}
+												}),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_rundis$elm_bootstrap$Bootstrap_Form$group,
+													{ctor: '[]'},
+													{
+														ctor: '::',
+														_0: A2(
+															_rundis$elm_bootstrap$Bootstrap_Form$label,
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$for('actor'),
+																_1: {ctor: '[]'}
+															},
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html$text('Actor: '),
+																_1: {ctor: '[]'}
+															}),
+														_1: {
+															ctor: '::',
+															_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$text(
+																{
+																	ctor: '::',
+																	_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$id('actor'),
+																	_1: {
+																		ctor: '::',
+																		_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$value(model.preferences.favoriteActor),
+																		_1: {
+																			ctor: '::',
+																			_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$attrs(
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Attributes$placeholder('Enter your favorite actor'),
+																					_1: {
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Events$onInput(_user$project$Msg$UpdatePreferencesActor),
+																						_1: {ctor: '[]'}
+																					}
+																				}),
+																			_1: {ctor: '[]'}
+																		}
+																	}
+																}),
+															_1: {ctor: '[]'}
+														}
+													}),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_rundis$elm_bootstrap$Bootstrap_Button$button,
+														{
+															ctor: '::',
+															_0: _rundis$elm_bootstrap$Bootstrap_Button$success,
+															_1: {
+																ctor: '::',
+																_0: _rundis$elm_bootstrap$Bootstrap_Button$attrs(
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Events$onClick(_user$project$Msg$MatchPercentage),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {ctor: '[]'}
+															}
+														},
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html$text('Add movie preferences'),
+															_1: {ctor: '[]'}
+														}),
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								})),
+						footer: _elm_lang$core$Maybe$Nothing
+					}) : _elm_lang$core$Maybe$Nothing),
+			_1: {ctor: '[]'}
+		});
+};

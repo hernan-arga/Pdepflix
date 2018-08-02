@@ -1,0 +1,78 @@
+var _user$project$Update$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		switch (_p0.ctor) {
+			case 'NoOp':
+				return model;
+			case 'Reset':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{movies: _user$project$Models$moviesCollection});
+			case 'FilterName':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						movies: A2(_user$project$Backend$filtrarPeliculasPorPalabrasClave, _p0._0, _user$project$Models$moviesCollection)
+					});
+			case 'IncrementLikes':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						movies: A2(_user$project$Backend$darLikeAPelicula, _p0._0, model.movies)
+					});
+			case 'ShowDialog':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{shouldShowDialog: true});
+			case 'HideDialog':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{shouldShowDialog: false});
+			case 'UpdatePreferencesKeywords':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						preferences: A3(_user$project$Models$Preferences, _p0._0, model.preferences.genre, model.preferences.favoriteActor)
+					});
+			case 'UpdatePreferencesGenre':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						preferences: A3(_user$project$Models$Preferences, model.preferences.keywords, _p0._0, model.preferences.favoriteActor)
+					});
+			case 'UpdatePreferencesActor':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						preferences: A3(_user$project$Models$Preferences, model.preferences.keywords, model.preferences.genre, _p0._0)
+					});
+			case 'MatchPercentage':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						movies: A2(_user$project$Backend$calcularPorcentajeDeCoincidencia, model.preferences, model.movies),
+						shouldShowDialog: false
+					});
+			case 'ChangeGenre':
+				var _p1 = _p0._0;
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						movies: A2(_user$project$Backend$filtrarPeliculasPorGenero, _p1, model.movies),
+						genre: _p1
+					});
+			case 'KidsFilter':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						movies: A2(_user$project$Backend$filtrarPeliculasPorMenoresDeEdad, !model.kidsProtection, _user$project$Models$moviesCollection),
+						kidsProtection: !model.kidsProtection
+					});
+			default:
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						movies: _user$project$Backend$ordenarPeliculasPorRating(model.movies)
+					});
+		}
+	});
