@@ -13,7 +13,6 @@ import Bootstrap.Grid.Row as Row
 import Bootstrap.Button as Button
 import Bootstrap.Badge as Badge
 
-
 moviePortrait : Movie -> Grid.Column Msg
 moviePortrait movie =
   Grid.col [] [
@@ -23,6 +22,7 @@ moviePortrait movie =
         , div [] [text ("Likes: " ++ toString(movie.likes))]
         , div [] [text ("Match Percentage: " ++ toString(movie.matchPercentage) ++ "%")]
         , div [Styles.likeButton] [Button.linkButton [ Button.outlineDanger, Button.attrs [onClick <| IncrementLikes movie.id ]] [ text "❤️" ]]
+        
     ]
   ]
   
