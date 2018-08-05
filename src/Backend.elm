@@ -1,6 +1,6 @@
 module Backend exposing(..)
 import Models exposing(Movie, Preferences)
-import List exposing (all,any,length,map)
+import List exposing (all,any,length,map, reverse)
 import String exposing (words)
 
 --Genero = "Horror" || "Action"
@@ -44,7 +44,7 @@ soloMenores = List.filter .forKids
 -- **************
 
 ordenarPeliculasPorRating : List Movie -> List Movie
-ordenarPeliculasPorRating = List.sortBy .matchPercentage
+ordenarPeliculasPorRating = List.reverse<<(List.sortBy .matchPercentage)
 
 -- **************
 -- Requerimiento: dar like a una película

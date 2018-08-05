@@ -22,14 +22,31 @@ var _user$project$Components_MoviePortrait$moviePortrait = function (movie) {
 						},
 						{
 							ctor: '::',
-							_0: A2(
-								_mpizenberg$elm_image_collection$Image$viewImg,
+							_0: A4(
+								_jinjor$elm_inline_hover$InlineHover$hover,
 								{
 									ctor: '::',
-									_0: _user$project$Styles$poster,
+									_0: {ctor: '_Tuple2', _0: 'background', _1: '#0000005c'},
 									_1: {ctor: '[]'}
 								},
-								movie.poster),
+								_elm_lang$html$Html$li,
+								{
+									ctor: '::',
+									_0: _user$project$Styles$movie,
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: A2(
+										_mpizenberg$elm_image_collection$Image$viewImg,
+										{
+											ctor: '::',
+											_0: _user$project$Styles$poster,
+											_1: {ctor: '[]'}
+										},
+										movie.poster),
+									_1: {ctor: '[]'}
+								}),
 							_1: {ctor: '[]'}
 						}),
 					_1: {

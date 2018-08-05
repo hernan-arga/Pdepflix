@@ -13,7 +13,9 @@ poster =
   style
     [ ("height", "400px")
     , ("width", "250px")
-    , ("margin-bottom", "10px") ]
+    , ("margin-bottom", "10px")
+    ,("position", "relative")
+    ,("z-index", "-1") ]
 
 title =
   style
@@ -34,4 +36,10 @@ portrait =
   style
   [("margin","auto"),
   ("width", "250px")
+  ]
+
+movie = 
+  style 
+  [("list-style-type", "none")
+  ,("height", "400px")
   ]

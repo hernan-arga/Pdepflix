@@ -169,10 +169,15 @@ var _user$project$Backend$darLikeAPelicula = function (id) {
 	return _elm_lang$core$List$map(
 		_user$project$Backend$dar1Like(id));
 };
-var _user$project$Backend$ordenarPeliculasPorRating = _elm_lang$core$List$sortBy(
-	function (_) {
-		return _.matchPercentage;
-	});
+var _user$project$Backend$ordenarPeliculasPorRating = function (_p2) {
+	return _elm_lang$core$List$reverse(
+		A2(
+			_elm_lang$core$List$sortBy,
+			function (_) {
+				return _.matchPercentage;
+			},
+			_p2));
+};
 var _user$project$Backend$soloMenores = _elm_lang$core$List$filter(
 	function (_) {
 		return _.forKids;
@@ -211,7 +216,7 @@ var _user$project$Backend$palabrasClavesEncontradas = F2(
 			_elm_lang$core$String$words(preferencias.keywords));
 	});
 var _user$project$Backend$porcentajePalabrasClaves = function (preferencias) {
-	return function (_p2) {
+	return function (_p3) {
 		return A2(
 			F2(
 				function (x, y) {
@@ -219,7 +224,7 @@ var _user$project$Backend$porcentajePalabrasClaves = function (preferencias) {
 				}),
 			20,
 			_elm_lang$core$List$length(
-				A2(_user$project$Backend$palabrasClavesEncontradas, preferencias, _p2)));
+				A2(_user$project$Backend$palabrasClavesEncontradas, preferencias, _p3)));
 	};
 };
 var _user$project$Backend$contieneActor = F2(

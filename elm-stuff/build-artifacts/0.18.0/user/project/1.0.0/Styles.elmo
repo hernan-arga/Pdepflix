@@ -1,3 +1,13 @@
+var _user$project$Styles$movie = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'list-style-type', _1: 'none'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'height', _1: '400px'},
+			_1: {ctor: '[]'}
+		}
+	});
 var _user$project$Styles$portrait = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
@@ -44,7 +54,15 @@ var _user$project$Styles$poster = _elm_lang$html$Html_Attributes$style(
 			_1: {
 				ctor: '::',
 				_0: {ctor: '_Tuple2', _0: 'margin-bottom', _1: '10px'},
-				_1: {ctor: '[]'}
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'position', _1: 'relative'},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'z-index', _1: '-1'},
+						_1: {ctor: '[]'}
+					}
+				}
 			}
 		}
 	});
