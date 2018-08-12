@@ -1,6 +1,30 @@
 var _user$project$Models$createPoster = function (imageUrl) {
 	return {url: imageUrl, width: 400, height: 400};
 };
+var _user$project$Models$thePrincessDiaries = {
+	id: 9,
+	poster: _user$project$Models$createPoster('./Assets/ThePrincessDiaries.png'),
+	title: 'El diario de la Princesa',
+	rating: 10.0,
+	genre: {
+		ctor: '::',
+		_0: 'Comedy',
+		_1: {ctor: '[]'}
+	},
+	link: 'https://www.youtube.com/watch?v=2CkcwPi20ms',
+	likes: 0,
+	matchPercentage: 0,
+	forKids: true,
+	actors: {
+		ctor: '::',
+		_0: 'Anne Hathaway',
+		_1: {
+			ctor: '::',
+			_0: 'Julie Andrews',
+			_1: {ctor: '[]'}
+		}
+	}
+};
 var _user$project$Models$jackAndJill = {
 	id: 8,
 	poster: _user$project$Models$createPoster('./Assets/Jack_and_jill.png'),
@@ -361,7 +385,11 @@ var _user$project$Models$moviesCollection = {
 							_1: {
 								ctor: '::',
 								_0: _user$project$Models$jackAndJill,
-								_1: {ctor: '[]'}
+								_1: {
+									ctor: '::',
+									_0: _user$project$Models$thePrincessDiaries,
+									_1: {ctor: '[]'}
+								}
 							}
 						}
 					}

@@ -30,7 +30,7 @@ type alias Model = {movies : List Movie, shouldShowDialog: Bool, preferences: Pr
 
 --MOVIES
 moviesCollection : List Movie
-moviesCollection = [avengers2, toyStory3, lionKing, it, labyrinth, inglouriousBasterds, banieros3, jackAndJill]
+moviesCollection = [avengers2, toyStory3, lionKing, it, labyrinth, inglouriousBasterds, banieros3, jackAndJill, thePrincessDiaries]
 
 avengers2 : Movie
 avengers2 = {id= 1, poster= createPoster "./Assets/Avengers_Age_Of_Ultron.png", title= "Avengers: Age of Ultron", rating= 8.3, genre= ["Action", "Adventure", "Superhero"], link= "https://www.youtube.com/watch?v=rD8lWtcgeyg", likes = 0, matchPercentage = 0, forKids = True, actors = ["Robert Downey JR", "Chris Hemsworth", "Mark Ruffalo", "Chris Evans", "Scarlett Johansson", "Samuel L. Jackson"]}
@@ -55,6 +55,9 @@ banieros3 = {id= 7, poster = createPoster "./Assets/banieros3.png", title= "Bañ
 
 jackAndJill : Movie
 jackAndJill = {id= 8, poster = createPoster "./Assets/Jack_and_jill.png", title= "Jack and Jill", rating= 2.3, genre= ["Horror"], link= "https://www.youtube.com/watch?v=qHKTXrUnN58", likes = 0, matchPercentage = 0, forKids = False, actors = ["Adam Sandler"]}
+
+thePrincessDiaries : Movie
+thePrincessDiaries = {id=9, poster = createPoster "./Assets/ThePrincessDiaries.png", title= "El diario de la Princesa", rating= 10.0, genre=["Comedy"], link= "https://www.youtube.com/watch?v=2CkcwPi20ms", likes= 0, matchPercentage= 0, forKids= True, actors = ["Anne Hathaway","Julie Andrews"]}
 
 --POSTERS
 createPoster : String -> Image
