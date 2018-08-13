@@ -30,7 +30,7 @@ type alias Model = {movies : List Movie, shouldShowDialog: Bool, preferences: Pr
 
 --MOVIES
 moviesCollection : List Movie
-moviesCollection = [avengers2, toyStory3, lionKing, it, labyrinth, inglouriousBasterds, banieros3, jackAndJill, thePrincessDiaries]
+moviesCollection = [avengers2, toyStory3, lionKing, it, labyrinth, inglouriousBasterds, banieros3, jackAndJill, thePrincessDiaries, gaturro, lasNormas]
 
 avengers2 : Movie
 avengers2 = {id= 1, poster= createPoster "./Assets/Avengers_Age_Of_Ultron.png", title= "Avengers: Age of Ultron", rating= 8.3, genre= ["Action", "Adventure", "Superhero"], link= "https://www.youtube.com/watch?v=rD8lWtcgeyg", likes = 0, matchPercentage = 0, forKids = True, actors = ["Robert Downey JR", "Chris Hemsworth", "Mark Ruffalo", "Chris Evans", "Scarlett Johansson", "Samuel L. Jackson"]}
@@ -58,6 +58,13 @@ jackAndJill = {id= 8, poster = createPoster "./Assets/Jack_and_jill.png", title=
 
 thePrincessDiaries : Movie
 thePrincessDiaries = {id=9, poster = createPoster "./Assets/ThePrincessDiaries.png", title= "El diario de la Princesa", rating= 10.0, genre=["Comedy"], link= "https://www.youtube.com/watch?v=2CkcwPi20ms", likes= 0, matchPercentage= 0, forKids= True, actors = ["Anne Hathaway","Julie Andrews"]}
+
+gaturro : Movie
+gaturro = {id=10, poster = createPoster "./Assets/Gaturro.png", title= "Gaturro", rating= 100000000000.0, genre=["Comedy","Family", "Animated"], link= "https://www.youtube.com/watch?v=FBlGmlLtSN0", likes= 999, matchPercentage= 0, forKids= True, actors = ["Gaturro"]}
+
+lasNormas : Movie
+lasNormas = {id=11, poster = createPoster "./Assets/Las normas de produccion.png", title= "Las normas de producción", rating= 10.0, genre=["Comedy","Family", "Animated"], link= "https://www.youtube.com/watch?v=Ax1svCIs4nI", likes= 1, matchPercentage= 0, forKids= True, actors = ["Deko","Mati","Abril","Hernan","Hernanda","Juan"]}
+
 
 --POSTERS
 createPoster : String -> Image
